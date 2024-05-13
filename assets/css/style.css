@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* colors */
+:root {
+  --primary-color: rgb(23, 1, 44);
+  --secondary-color: rgb(107, 6, 202);
+  --third-color: rgb(27, 1, 51);
+  --black-colors: #e0771c;
+  --white-colors: #fff;
+  --font1: "Orbitron";
+  --white: #fff;
+  --hover-color: rgb(71, 7, 131);
+}
+.bg {
+  background-color: var(--primary-color);
+}
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.btn {
+  border-radius: 0px !important;
+  border: unset;
+}
+.rightside .dropdown-menu {
+  border-radius: 0px;
+  padding-right: 100px;
+  background-color: var(--primary-color);
+  width: 90%;
+}
+.rightside .dropdown-menu li a {
+  color: white;
+  width: 100%;
+}
+.rightside .dropdown-menu li a:hover {
+  background-color: unset;
+}
+
+.btn-book {
+  background-color: var(--secondary-color);
+  color: white;
+  border: 0;
+  padding: 10px;
+  border-radius: 5px !important;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+
+  box-shadow: 2px 2px 5px 0px rgb(117, 116, 116);
+}
+
+.rightside .btn-book {
+  background-color: var(--secondary-color);
+  color: white;
+}
+.btn-book:hover {
+  background-color: rgb(71, 7, 131) !important;
+  color: white;
+}
+
+.navbar {
+  background-color: var(--primary-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar-brand {
+  width: 150px;
+}
+
+.navbar .nav-item .nav-link,
+.offcanvas-body {
+  color: white !important;
+  margin-right: 20px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-family: "Orbitron";
+  letter-spacing: 5px;
+}
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 15px;
+  background-color: white;
+  margin-left: 10px;
+  rotate: 210deg;
+  margin-top: 2px;
+}
+
+.menu-btn {
+  display: none !important;
+}
+
+@media screen and (max-width: 990px) {
+  .menu-btn {
+    display: block !important;
+  }
+}
+
+/* hero styles start here */
+.hero {
+  position: relative;
+}
+.hero-content {
+  position: relative;
+  height: 120vh; /* Adjust this to fit your design */
+  overflow: hidden;
+}
+
+.hero .playVideo {
+  position: absolute;
+  bottom: 250px;
+  right: 40px;
+}
+@media screen and (max-width: 675px){
+ 
+.hero .playVideo {
+  bottom: 280px;
+  right: 60px;
+}
+}
+
+.hero .playVideo h4 {
+  color: white;
+  font-family: var(--font1);
+  font-size: 25px;
+}
+
+#video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire area */
+  z-index: -1; /* Push the video behind other content */
+}
+
+.about h1,
+h2 {
+  font-size: 40px;
+  font-family: var(--font1);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  position: relative;
+}
+.about h2::after {
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  content: "";
+  height: 5px;
+  width: 60px;
+  background: white;
+}
+
+.about img {
+  height: 430px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.3s ease all;
+}
+
+.about img:hover {
+  transform: rotate(1deg) scale(1.05);
+}
+
+/* experience setion */
+.experience {
+  align-items: center;
+}
+.experience h2 {
+  font-size: 50px;
+  margin: 20px 0px 40px 0px;
+  font-family: var(--font1);
+}
+.experience p {
+  font-size: 16px;
+}
+.experience button {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.experience img {
+  height: 450px;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 1200px) {
+  .experience .content {
+    padding-left: 100px;
+  }
+}
+
+/* Home contact section starts here  */
+.contact {
+  background-color: var(--third-color);
+  color: var(--white);
+}
+.contact h4 {
+  font-weight:400;
+}
+.contact h3 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-family: var(--font1);
+  color: var(--white);
+}
+.contact h5 {
+  font-weight: 400;
+  font-family: sans-serif;
+  margin-top: 30px;
+}
+.contact label{
+  font-weight: 300;
+}
+
+@media screen and (max-width: 576px) {
+  .contact h3 {
+    font-size: 2rem;
+  }
+}
+
+.banner {
+  background: url(/assets/img/food2.jpg);
+  background-position: center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+.banner::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(23, 1, 44, 0.495), rgba(11, 1, 32, 0.746));
+  z-index: 1;
+}
+
+.banner .overlay {
+  position: relative;
+  max-width: 500px;
+}
+
+.banner .overlay .content {
+  position: absolute;
+  top: 70px;
+  z-index: 10;
+  left: 50px;
+}
+.banner .overlay .content h2 {
+  font-size: 65px;
+}
+@media screen and (min-width: 1000px) {
+  .banner .overlay .content h2 {
+    left: -20px !important;
+  }
+
+
+  
+}
+@media screen and (max-width: 675px) {
+  .banner .overlay .content{
+    left: unset;
+      }
+}
+
+.banner .overlay .content p {
+  line-height: 30px;
+}
+
+/* footer styles starts here */
+.footer-sec {
+  background-color: var(--primary-color);
+}
+
+footer h5{
+  margin-bottom: 30px;
+}
+footer .nav-link {
+  color: whitesmoke !important;
+  font-weight: 200px;
+  font-size: 14px;
+  font-style: normal;
+}
+
+footer h5 {
+  color: white;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 769px) {
+  footer .mb-3 {
+    margin-bottom: 40px !important;
+  }
+}
+
+#BackTotop-Btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 18px;
+  width: 45px;
+  height: 45px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1001;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  box-shadow: 2px 1px 5px 0px rgb(117, 116, 116);
+}
+
+#BackTotop-Btn:hover {
+  background-color: var(--hover-color);
+}
